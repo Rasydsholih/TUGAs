@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+                //lkpd 04
+
+        //no01
+        let pabp = 86;
+        let math = 82;
+        let dpk = 77;
+        let rata2 = (pabp + math + dpk)/3
+
+        if(rata2 >= 80 && rata2 <= 100){
+            grade = "a"
+        } else if(rata2 >=75 && rata2 <= 80){
+            grade = "b"
+        } else if(rata2 >= 65 && rata2 <= 75){
+            grade = "c"
+        } else if(rata2 >= 45 && rata2 <= 65){
+            grade = "d"
+        } else if(rata2 >= 0 && rata2 <= 45){
+            grade = "e"
+        } else{
+            grade = "k"
+        }
+
+        console.log(`maka nilai nya adalah ${rata2}`)
+        console.log(`kategorinya adalah "${grade}"`)
+
+
+        //no02
+        //kp = kode pegawai
+        //g = golongan
+        //dd = tanggal
+        //mm = bulan
+        //yy = tahun
+        //nu = no urut
+        // let kp = Number(prompt("masukan kode pegawai (11 digit)"))
+
+
+        let kp = 22505197803 
+        let g = Math.floor(kp / 10000000000)
+        let dd = Math.floor((kp  %10000000000)/100000000);
+        let mm = Math.floor((kp % 100000000)/1000000);
+        let yy = Math.floor((kp %1000000)/100)
+        let nu = Math.floor(kp %100)
+
+        if (g <= 1 && g >= 4 ) {
+            console.log(`${g} gak boleh lebih dari 4`)
+        }
+
+
+        switch (mm) {
+            case 1 :
+                bulan = "january";
+                break;
+            case 2 :
+                bulan = "februari";
+                break;
+            case 3 :
+                bulan = "maret";
+                break;
+            case 4 :
+                bulan = "apri;";
+                break;
+            case 5 :
+                bulan = "mei";
+                break;
+            case 6 :
+                bulan = "juni";
+                break;
+            case 7 :
+                bulan = "juli";
+                break;
+            case 8 :
+                bulan = "agustus";
+                break;
+            case 9 :
+                bulan = "september";
+                break;
+            case 10 :
+                bulan ="oktober";
+                break;
+            case 11 :
+                bulan ="november";
+                break;
+            case 12 :
+                bulan ="desember";
+                break;
+        }
+
+        document.write(`kode pegawai : ${g} <br> tanggal : ${dd} <br> bulan : ${bulan} <br> tahun : ${yy} <br> no urut : ${nu} `)
+
+
+        //no3
+
+        let hh = 23
+        let mnt = 59
+        let ss = 58
+        let hasil =  ss + 1
+        if(hasil > 59) {
+            ss = 0
+            mnt = mnt + 1
+            if(mnt > 59) {
+                mnt = 0
+                hh = hh + 1
+                if(hh > 23) {
+                    ss = 0
+                    mnt = 0
+                    hh = 0
+                }
+            }
+            console.log(`${hh}jam ${mnt} menit ${ss} detik`)
+        }else {
+            console.log(`${hh}jam ${mnt} menit ${hasil} detik`)
+        }
+    </script>
+</body>
+</html>
